@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IceGirl · AI Voice Assistant</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Vendored locally so the app works fully offline -->
+  <script src="lib/live2dcubismcore.min.js"></script>
+  <script src="lib/pixi.min.js"></script>
+  <script src="lib/cubism4.min.js"></script>
+</head>
+<body>
+  <div id="stage-wrap">
+    <canvas id="live2d-canvas"></canvas>
+
+    <!-- Loading overlay -->
+    <div id="loading" class="overlay">
+      <div class="spinner"></div>
+      <p id="loading-text">Memuat model…</p>
+    </div>
+
+    <!-- Subtitle / caption -->
+    <div id="caption-box">
+      <p id="caption-role"></p>
+      <p id="caption-text"></p>
+      <p id="caption-translation"></p>
+    </div>
+
+    <!-- Controls -->
+    <div id="controls">
+      <button id="mic-btn" class="mic" title="Tekan untuk bicara (atau tekan Spasi)">
+        <span class="mic-icon">🎤</span>
+        <span class="mic-label">Bicara</span>
+      </button>
+
+      <div id="text-fallback">
+        <input id="text-input" type="text" placeholder="…atau ketik pesan di sini lalu Enter" />
+      </div>
+
+      <button id="settings-btn" title="Pengaturan">⚙️</button>
+    </div>
+
+    <!-- Status pill -->
+    <div id="status-pill" class="idle">siap</div>
+  </div>
+
+  <!-- Settings panel -->
+  <div id="settings-panel" class="hidden">
+    <h3>Pengaturan</h3>
+    <label>
+      Bahasa jawaban Yuki
+      <select id="reply-lang-select">
+        <option value="auto">Otomatis (ikut kamu)</option>
+        <option value="id">Bahasa Indonesia</option>
+        <option value="en">English</option>
+        <option value="ja">日本語 (Jepang + terjemahan)</option>
+      </select>
+    </label>
+    <label>
+      Suara (engine)
+      <select id="tts-engine-select">
+        <option value="edge">Edge Neural (natural, online)</option>
+        <option value="browser">Browser (offline)</option>
+      </select>
+    </label>
+    <label id="edge-voice-row">
+      Suara Edge
+      <select id="edge-voice-select"></select>
+    </label>
+    <label id="edge-pitch-row">
+      Nada / pitch (tinggi = imut) <span id="edge-pitch-val"></span>
+      <input id="edge-pitch-range" type="range" min="-10" max="50" step="1" value="15" />
+    </label>
+    <label>
+      Otak AI (Provider)
+      <select id="provider-select"></select>
+    </label>
+    <label id="local-model-row">
+      Model lokal (Ollama)
+      <select id="local-model-select"></select>
+    </label>
+    <label>
+      Suara (TTS)
+      <select id="voice-select"></select>
+    </label>
+    <label>
+      Kecepatan bicara
+      <input id="rate-range" type="range" min="0.5" max="1.5" step="0.05" value="1" />
+    </label>
+    <label>
+      Bahasa pendengaran (STT)
+      <select id="stt-lang">
+        <option value="auto">Otomatis (ikuti input)</option>
+        <option value="id-ID">Bahasa Indonesia</option>
+        <option value="en-US">English (US)</option>
+      </select>
+    </label>
+    <label class="row">
+      <input id="auto-listen" type="checkbox" />
+      Dengarkan otomatis setelah menjawab
+    </label>
+    <button id="settings-close">Tutup</button>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/live2d.js"></script>
+  <script src="js/stt.js"></script>
+  <script src="js/tts.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

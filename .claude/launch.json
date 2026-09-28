@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "icegirl",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["start"],
+      "cwd": "server",
+      "port": 3000
+    }
+  ]
+}
