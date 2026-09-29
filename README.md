@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧊 IceGirl — AI Voice Assistant
+# 🧊 IceGirl · AI Voice Assistant
 
 **Asisten AI dengan model Live2D yang bisa mendengar, menjawab dengan suara, dan berekspresi.**
 
@@ -20,12 +20,12 @@ Lip-sync gerak mulut · kedip mata otomatis · ekspresi wajah mengikuti emosi ja
 
 ## ✨ Fitur
 
-- 🎙️ **Mendengar (STT)** — menangkap suaramu lewat mikrofon dengan Web Speech API.
-- 🔊 **Menjawab dengan suara (TTS)** — modular, mudah di-upgrade ke premium (ElevenLabs/Azure/msedge-tts).
-- 👄 **Lip-sync** — gerak mulut model menyesuaikan suara yang keluar.
-- 😊 **Ekspresi & kedip otomatis** — wajah bereaksi sesuai emosi dari jawaban AI.
-- 🌏 **Bilingual** — Bahasa Indonesia + English, mengikuti bahasamu.
-- 🧠 **Otak fleksibel** — Claude sebagai default, siap dialihkan ke Gemini / OpenAI.
+- 🎙️ **Mendengar (STT)**, menangkap suaramu lewat mikrofon dengan Web Speech API.
+- 🔊 **Menjawab dengan suara (TTS)**, modular, mudah di-upgrade ke premium (ElevenLabs/Azure/msedge-tts).
+- 👄 **Lip-sync**, gerak mulut model menyesuaikan suara yang keluar.
+- 😊 **Ekspresi & kedip otomatis**, wajah bereaksi sesuai emosi dari jawaban AI.
+- 🌏 **Bilingual**, Bahasa Indonesia + English, mengikuti bahasamu.
+- 🧠 **Otak fleksibel**, Claude sebagai default, siap dialihkan ke Gemini / OpenAI.
 
 ## 🛠️ Tech Stack
 
